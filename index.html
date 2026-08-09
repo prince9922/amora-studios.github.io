@@ -1,23 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amora Studies</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body><header><nav><h2>Amora Studies</h2>
-<ul><li><a href="#home">Home</a></li><li><a href="#products">Products</a></li><li><a href="#about">About</a></li></ul></nav></header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amora Studios — personalised gifts made with your memories.">
+  <title>Amora Studios | Personalised Gifts</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">Amora <span>Studios</span></a>
+
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="coming-soon.html">Products</a>
+      <a href="coming-soon.html">Category</a>
+      <a href="#about">About Us</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Live running order banner -->
+<div class="ticker" aria-label="WhatsApp order announcement">
+  <div class="ticker-track">
+    <span class="ticker-item">✨ For placing your order, WhatsApp us at +91 80046 66834 &nbsp; • &nbsp; Customise your favourite gifts with Amora Studios</span>
+    <span class="ticker-item">✨ For placing your order, WhatsApp us at +91 80046 66834 &nbsp; • &nbsp; Customise your favourite gifts with Amora Studios</span>
+    <span class="ticker-item">✨ For placing your order, WhatsApp us at +91 80046 66834 &nbsp; • &nbsp; Customise your favourite gifts with Amora Studios</span>
+  </div>
+</div>
+
+<main>
+
 <section class="hero" id="home">
-<div class="overlay"><h1>Personalized Gifts Made With Love</h1>
-<p>Creative Printing • Custom Designs • Premium Quality</p>
-<a href="#products"><button>Explore Collection</button></a></div></section>
-<section id="products"><h1 class="title">Our Collection</h1>
-<div class="products"><div class="card"><img src="chai.jpg" alt="Coffee Mugs"><h2>Coffee Mugs</h2><p>✨ To Be Revealed Soon ✨</p></div>
-<div class="card"><img src="magicmug.jpg" alt="Magic Mugs"><h2>Magic Mugs</h2><p>✨ To Be Revealed Soon ✨</p></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8" alt="Printed Bottles"><h2>Printed Bottles</h2><p>✨ To Be Revealed Soon ✨</p></div>
-<div class="card"><img src="keychain.jpg" alt="Key Chains"><h2>Key Chains</h2><p>✨ To Be Revealed Soon ✨</p></div>
-<div class="card"><img src="acrylic.jpg" alt="Acrylic Photo Frames"><h2>Acrylic Photo Frames</h2><p>✨ To Be Revealed Soon ✨</p></div>
-<div class="card"><img src="frame.jpg" alt="MDF Photo Frames"><h2>MDF Photo Frames</h2><p>✨ To Be Revealed Soon ✨</p></div>
-<div class="card"><img src="magnet.jpg" alt="Fridge Magnets"><h2>Fridge Magnets</h2><p>✨ To Be Revealed Soon ✨</p></div></div></section>
-<footer id="about"><h1>About Us</h1><p>Welcome to <b>Amora Studies</b> — where creativity meets personalization. We specialize in customized gifts including mugs, bottles, keychains, acrylic and MDF frames, and fridge magnets designed with love for every occasion.</p><h3>© 2026 Amora Studies | Crafted with Love ❤️</h3></footer>
-<script src="script.js"></script></body></html>
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Personalised gifting</div>
+      <h1>Make every gift <em>personal.</em></h1>
+      <p>
+        Turn your favourite photos, names, messages and memories into
+        beautiful personalised gifts — thoughtfully made by Amora Studios.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#categories" class="btn btn-primary">Explore Categories</a>
+        <a href="https://wa.me/918004666834" class="btn btn-outline" target="_blank">Order on WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Replace this block with your main banner/hero image -->
+    <div class="hero-art">
+      <span><img src="assets/image/amora-logo.png" alt="Amora Studios Logo"/></span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Shop by category</div>
+        <h2>Coffee Mugs</h2>
+      </div>
+      <a class="section-link" href="mugs.html">View all →</a>
+    </div>
+
+    <div class="product-row">
+      <a class="product-card" href="product.html?id=mug-01">
+        <div class="product-image"><img src="assets/image/custommug.png" alt="Custom Photo Mug"/></div>
+        <div class="product-body"><p class="product-name">Custom Photo Mug</p><span class="product-meta">Personalised Mug</span></div>
+      </a>
+      <a class="product-card" href="product.html?id=mug-02">
+        <div class="product-image"><img src="assets/image/magicmug.png" alt="Custom Magic Mug"/></div>
+        <div class="product-body"><p class="product-name">Magic Mug</p><span class="product-meta">Personalised Mug</span></div>
+      </a>
+      <a class="product-card" href="product.html?id=mug-03">
+        <div class="product-image"><img src="assets/image/couplemug.png" alt="Couple Photo Mug"/></div>
+        <div class="product-body"><p class="product-name">Couple Mug</p><span class="product-meta">Personalised Mug</span></div>
+      </a>
+      <a class="product-card" href="product.html?id=mug-04">
+        <div class="product-image"><img src="assets/image/personalizedmug.png" alt="personalized Mug"/></div>
+        <div class="product-body"><p class="product-name">Name Mug</p><span class="product-meta">Personalised Mug</span></div>
+      </a>
+    </div>
+
+    <div class="section-head" style="margin-top:65px">
+      <div>
+        <div class="eyebrow">Memories on display</div>
+        <h2>Frames</h2>
+      </div>
+      <a class="section-link" href="frames.html">View all →</a>
+    </div>
+
+    <div class="product-row">
+      <a class="product-card" href="product.html?id=frame-01"><div class="product-image"><img src="assets/image/Frame3.png" alt="Framefour"/></div><div class="product-body"><p class="product-name">Personalised Frame</p><span class="product-meta">Photo Frame</span></div></a>
+      
+      <a class="product-card" href="product.html?id=frame-02"><div class="product-image"><img src="assets/image/Frame2.png" alt="FrameThree"/></div><div class="product-body"><p class="product-name">Couple Frame</p><span class="product-meta">Photo Frame</span></div></a>
+      
+      <a class="product-card" href="product.html?id=frame-03"><div class="product-image"><img src="assets/image/Frame4.png" alt="Frametwo"/></div><div class="product-body"><p class="product-name">A4 Photo Frame</p><span class="product-meta">Photo Frame</span></div></a>
+      
+      <a class="product-card" href="product.html?id=frame-04"><div class="product-image"><img src="assets/image/FrameOne.png" alt="FrameOne"/></div><div class="product-body"><p class="product-name">Memory Frame</p><span class="product-meta">Photo Frame</span></div></a>
+    </div>
+
+    <div class="section-head" style="margin-top:65px">
+      <div>
+        <div class="eyebrow">Little gifts, big memories</div>
+        <h2>Keyrings</h2>
+      </div>
+      <a class="section-link" href="keychain.html">View all →</a>
+    </div>
+
+    <div class="product-row">
+      <a class="product-card" href="product.html?id=keyring-01"><div class="product-image"><img src="assets/image/keychain/keychain3.jpeg" alt="keychain3"/></div><div class="product-body"><p class="product-name">Photo Keyring</p><span class="product-meta">Keyring</span></div></a>
+      
+      <a class="product-card" href="product.html?id=keyring-02"><div class="product-image"><img src="assets/image/keychain/keychain2.jpeg" alt="keychain2"/></div><div class="product-body"><p class="product-name">Couple Keyring</p><span class="product-meta">Keyring</span></div></a>
+      
+      <a class="product-card" href="product.html?id=keyring-03"><div class="product-image"><img src="assets/image/keychain/keychain1.jpeg" alt="keychain1"/></div><div class="product-body"><p class="product-name">Name Keyring</p><span class="product-meta">Keyring</span></div></a>
+      
+      <a class="product-card" href="product.html?id=keyring-04"><div class="product-image"><img src="assets/image/keychain/keychain4.jpeg" alt="keychain4"/></div><div class="product-body"><p class="product-name">Custom Keyring</p><span class="product-meta">Keyring</span></div></a>
+    </div>
+
+    <div class="section-head" style="margin-top:65px">
+      <div>
+        <div class="eyebrow">Carry your memories</div>
+        <h2>Bottles</h2>
+      </div>
+      <a class="section-link" href="bottles.html">View all →</a>
+    </div>
+
+    <div class="product-row">
+      <a class="product-card" href="product.html?id=bottle-01"><div class="product-image"><img src="assets/image/bottle/Bottle1.jpeg" alt="Bottle1"/></div><div class="product-body"><p class="product-name">Custom Bottle</p><span class="product-meta">500 ml Bottle</span></div></a>
+      
+      <a class="product-card" href="product.html?id=bottle-02"><div class="product-image"><img src="assets/image/bottle/Bottle2.png" alt="Bottle1"/></div><div class="product-body"><p class="product-name">Name Bottle</p><span class="product-meta">Personalised Bottle</span></div></a>
+      
+      <a class="product-card" href="product.html?id=bottle-03"><div class="product-image"><img src="assets/image/bottle/Bottle3.png" alt="Bottle1"/></div><div class="product-body"><p class="product-name">Photo Bottle</p><span class="product-meta">Personalised Bottle</span></div></a>
+      
+      <a class="product-card" href="product.html?id=bottle-04"><div class="product-image"><img src="assets/image/bottle/Bottle4.png" alt="Bottle1"/></div><div class="product-body"><p class="product-name">Gift Bottle</p><span class="product-meta">Personalised Bottle</span></div></a>
+    </div>
+
+  </div>
+</section>
+
+<section class="intro" id="about">
+  <div class="container intro-inner">
+    <div>
+      <div class="eyebrow">About Amora Studios</div>
+      <h2>Gifts that feel like they were made just for them.</h2>
+    </div>
+    <div>
+      <p>
+        At Amora Studios, we turn your special moments into personalised
+        products that are made to be remembered. Add a photo, name, message
+        or design and create something uniquely yours.
+      </p>
+      <a href="about.html" class="section-link">Know more about us →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Amora <span>Studios</span></div>
+        <p>Personalised gifts made with your memories.</p>
+        <p>Order directly on WhatsApp: <a href="https://wa.me/918004666834" target="_blank">+91 80046 66834</a></p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a><br>
+        <a href="#categories">Categories</a><br>
+        <a href="about.html">About Us</a><br>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+
+      <div>
+        <h4>Write to us</h4>
+        <a href="mailto:support@amorastudios.in">support@amorastudios.in</a>
+        <p>Instagram: @toamorastudios</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Amora Studios. All rights reserved.</span>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
