@@ -1,26 +1,630 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="This Amora Studios page is currently under development."><title>Coming Soon | Amora Studios</title>
-<link rel="stylesheet" href="assets/css/style.css"></head><body>
-<header class="site-header"><div class="container nav">
-<a href="index.html" class="logo">Amora <span>Studios</span></a><button class="menu-btn" aria-label="Open menu">☰</button>
-<nav class="nav-links"><a href="index.html">Home</a><a href="coming-soon.html">Products</a><a href="coming-soon.html">Category</a><a href="about.html">About Us</a><a href="https://wa.me/918004666834" target="_blank" class="nav-cta">Contact</a></nav>
-</div></header>
-<div class="ticker"><div class="ticker-track">
-<span class="ticker-item">✨ This section is under development &nbsp; • &nbsp; For orders, WhatsApp us at +91 80046 66834</span>
-<span class="ticker-item">✨ This section is under development &nbsp; • &nbsp; For orders, WhatsApp us at +91 80046 66834</span>
-<span class="ticker-item">✨ This section is under development &nbsp; • &nbsp; For orders, WhatsApp us at +91 80046 66834</span>
-</div></div>
-<main><section class="coming-section"><div class="container coming-grid"><div>
-<div class="eyebrow">Amora Studios</div><h1>Something beautiful is <em>coming soon.</em></h1>
-<p class="lead">We're currently working on this section to bring you a better Amora Studios experience. Our personalised gifting collection is being prepared with care.</p>
-<div class="status-grid"><div class="status"><strong>🎁 Custom Gifts</strong><span>Personalised for you</span></div><div class="status"><strong>✨ New Collection</strong><span>Coming soon</span></div><div class="status"><strong>💝 Made With Care</strong><span>Created by Amora Studios</span></div></div>
-<div class="buttons"><a href="index.html" class="btn btn-primary">← Back to Home</a><a href="https://wa.me/918004666834" target="_blank" class="btn btn-outline">Order on WhatsApp</a></div>
-</div>
-<div class="illustration" aria-label="Coming soon gift illustration">
-<div class="moon"></div><div class="star s1">✦</div><div class="star s2">✧</div><div class="star s3">✦</div><div class="star s4">✧</div>
-<div class="gift"><div class="gift-lid"></div><div class="ribbon-v"></div><div class="ribbon-h"></div><div class="bow-left"></div><div class="bow-right"></div><div class="tag">PERSONALISED WITH LOVE</div></div>
-<div class="cloud c1"></div><div class="cloud c2"></div><div class="message">COMING SOON ✨</div>
-</div></div></section></main>
-<footer><div class="container footer-bottom"><span>© 2026 Amora Studios. All rights reserved.</span><span><a href="terms.html">Terms & Conditions</a> &nbsp; • &nbsp; <a href="mailto:support@amorastudios.in">support@amorastudios.in</a></span></div></footer>
-<script src="assets/js/main.js"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amora Studios | Combos Coming Soon</title>
+
+  <style>
+    :root {
+      --bg: #f5e8dc;
+      --bg-deep: #ead3c1;
+      --brown: #623f31;
+      --brown-dark: #40271f;
+      --accent: #b96846;
+      --cream: #fffaf5;
+      --shadow: rgba(70, 39, 27, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.75), transparent 28%),
+        radial-gradient(circle at 85% 80%, rgba(185,104,70,.12), transparent 30%),
+        linear-gradient(135deg, var(--bg), var(--bg-deep));
+      color: var(--brown-dark);
+      overflow-x: hidden;
+    }
+
+    .combo-section {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px 24px;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+
+    /* ===== Amora Studios Header ===== */
+    .site-header {
+      position: relative;
+      z-index: 20;
+      background: rgba(255, 250, 245, .96);
+      box-shadow: 0 8px 25px rgba(64, 39, 31, .07);
+      backdrop-filter: blur(12px);
+    }
+
+    .top-bar {
+      min-height: 34px;
+      padding: 7px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      background: #5c3b2e;
+      color: #fff9f5;
+      font-size: 11px;
+      letter-spacing: .2px;
+    }
+
+    .top-bar span {
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      width: min(1240px, 94%);
+      min-height: 78px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .brand-logo {
+      flex: 0 0 auto;
+      color: #5c3b2e;
+      text-decoration: none;
+      text-align: center;
+      line-height: .9;
+      font-family: Georgia, "Times New Roman", serif;
+      min-width: 112px;
+    }
+
+    .brand-logo .brand-main {
+      display: block;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .brand-logo .brand-sub {
+      display: block;
+      margin-top: 6px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 4px;
+    }
+
+    .brand-heart {
+      color: #c68b59;
+      font-size: 11px;
+      vertical-align: top;
+      margin-left: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 27px;
+      flex: 1;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: #40271f;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 29px 0;
+      transition: color .2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #9a5a3b;
+    }
+
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 20px;
+      height: 2px;
+      border-radius: 4px;
+      background: #9a5a3b;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #5c3b2e;
+    }
+
+    .nav-action {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      color: inherit;
+      font-size: 17px;
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -8px;
+      right: -9px;
+      min-width: 14px;
+      height: 14px;
+      padding: 0 3px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #9a5a3b;
+      color: #fff;
+      font: 700 8px/1 Arial, sans-serif;
+    }
+
+    @media (max-width: 900px) {
+      .main-nav {
+        min-height: 68px;
+        gap: 14px;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .nav-actions {
+        gap: 9px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .top-bar {
+        justify-content: center;
+        text-align: center;
+        padding: 7px 10px;
+      }
+
+      .top-bar span:not(:first-child) {
+        display: none;
+      }
+
+      .main-nav {
+        width: 92%;
+        min-height: 70px;
+        justify-content: space-between;
+      }
+
+      .brand-logo {
+        min-width: 92px;
+      }
+
+      .brand-logo .brand-main {
+        font-size: 21px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-actions {
+        gap: 12px;
+      }
+    }
+
+    /* Decorative background shapes */
+    .orb,
+    .orb::after {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .orb {
+      width: 360px;
+      height: 360px;
+      top: -150px;
+      right: -100px;
+      background: rgba(255,255,255,.28);
+      filter: blur(2px);
+      z-index: -2;
+    }
+
+    .orb::after {
+      content: "";
+      width: 220px;
+      height: 220px;
+      left: -520px;
+      top: 580px;
+      background: rgba(185,104,70,.10);
+    }
+
+    .content {
+      width: min(1100px, 100%);
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 9px 18px;
+      border: 1px solid rgba(98,63,49,.22);
+      border-radius: 999px;
+      color: var(--accent);
+      background: rgba(255,255,255,.35);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      animation: fadeUp .8s ease both;
+    }
+
+    .title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 7vw, 88px);
+      line-height: .95;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 18px;
+      animation: fadeUp .9s .1s ease both;
+    }
+
+    .subtitle {
+      max-width: 650px;
+      margin: 0 auto 48px;
+      color: rgba(64,39,31,.72);
+      font-size: clamp(15px, 2vw, 19px);
+      line-height: 1.7;
+      animation: fadeUp 1s .2s ease both;
+    }
+
+    /* Main 3D text */
+    .coming-soon {
+      position: relative;
+      display: inline-block;
+      margin: 5px 0 38px;
+      perspective: 900px;
+      transform-style: preserve-3d;
+      animation: floatText 4s ease-in-out infinite;
+    }
+
+    .coming-soon span {
+      display: block;
+      position: relative;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(55px, 11vw, 150px);
+      line-height: .9;
+      font-weight: 900;
+      letter-spacing: -5px;
+      text-transform: uppercase;
+      color: #7b4a2f;
+
+      /* 3D extrusion — rich chocolate brown */
+      text-shadow:
+        1px 1px 0 #6a3d27,
+        2px 2px 0 #6a3d27,
+        3px 3px 0 #59321f,
+        4px 4px 0 #59321f,
+        5px 5px 0 #482819,
+        6px 6px 0 #482819,
+        7px 7px 0 #3a2015,
+        8px 8px 0 #3a2015,
+        9px 9px 0 #2f1a12,
+        10px 10px 0 #2f1a12,
+        11px 11px 0 rgba(47,26,18,.18),
+        18px 22px 30px rgba(47,26,18,.28);
+      transform: rotateX(8deg) rotateY(-5deg);
+      animation: shine 3.5s ease-in-out infinite;
+    }
+
+    .coming-soon::before {
+      content: "";
+      position: absolute;
+      width: 70%;
+      height: 25px;
+      left: 15%;
+      bottom: -34px;
+      border-radius: 50%;
+      background: rgba(64,39,31,.20);
+      filter: blur(12px);
+      transform: rotateX(70deg);
+      animation: shadowPulse 4s ease-in-out infinite;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 16px rgba(255,255,255,.9);
+      animation: sparkle 2.5s infinite ease-in-out;
+    }
+
+    .sparkle.one { top: 12%; left: -8%; animation-delay: .2s; }
+    .sparkle.two { top: 8%; right: -7%; animation-delay: .9s; }
+    .sparkle.three { bottom: 8%; right: 5%; animation-delay: 1.5s; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      max-width: 800px;
+      margin: 0 auto 38px;
+      animation: fadeUp 1s .4s ease both;
+    }
+
+    .card {
+      padding: 24px 18px;
+      border: 1px solid rgba(98,63,49,.12);
+      border-radius: 22px;
+      background: rgba(255,250,245,.55);
+      box-shadow:
+        0 15px 35px rgba(70,39,27,.08),
+        inset 0 1px 0 rgba(255,255,255,.7);
+      backdrop-filter: blur(10px);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 22px 40px rgba(70,39,27,.13);
+    }
+
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: var(--brown);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+
+    .card p {
+      color: rgba(64,39,31,.65);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      color: #fff;
+      background: var(--brown);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 12px 25px rgba(64,39,31,.20);
+      transition: transform .25s ease, background .25s ease;
+      animation: fadeUp 1s .5s ease both;
+    }
+
+    .cta:hover {
+      transform: translateY(-3px);
+      background: var(--brown-dark);
+    }
+
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin-top: 12px;
+      padding: 12px 22px;
+      border: 1px solid rgba(92, 59, 46, .25);
+      border-radius: 999px;
+      color: #5c3b2e;
+      background: rgba(255, 250, 245, .72);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(64, 39, 31, .08);
+      transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+      animation: fadeUp 1s .6s ease both;
+    }
+
+    .back-home:hover {
+      transform: translateY(-3px);
+      background: #fff9f5;
+      box-shadow: 0 12px 25px rgba(64, 39, 31, .13);
+    }
+
+    .brand {
+      margin-top: 30px;
+      color: rgba(64,39,31,.52);
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0) rotateZ(0deg); }
+      50% { transform: translateY(-10px) rotateZ(-.5deg); }
+    }
+
+    @keyframes shine {
+      0%, 100% {
+        filter: brightness(1);
+      }
+      50% {
+        filter: brightness(1.18) saturate(1.15);
+      }
+    }
+
+    @keyframes shadowPulse {
+      0%, 100% { transform: scaleX(.9) rotateX(70deg); opacity: .45; }
+      50% { transform: scaleX(1.08) rotateX(70deg); opacity: .22; }
+    }
+
+    @keyframes sparkle {
+      0%, 100% { transform: scale(.4); opacity: .2; }
+      50% { transform: scale(1.4); opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .combo-section {
+        padding: 55px 18px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+      }
+
+      .coming-soon span {
+        letter-spacing: -3px;
+      }
+
+      .subtitle {
+        margin-bottom: 35px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    
+
+    <div class="main-nav">
+      <a class="brand-logo" href="/">
+        <span class="brand-main">AMORA<span class="brand-heart">♡</span></span>
+        <span class="brand-sub">STUDIOS</span>
+      </a>
+
+     
+
+      
+    </div>
+  </header>
+
+
+  <main class="combo-section">
+    <div class="orb"></div>
+
+    <div class="content">
+
+      <div class="eyebrow">Something special is coming</div>
+
+      <h1 class="title">Curated Gift Combos</h1>
+
+      <p class="subtitle">
+        Thoughtfully paired personalized gifts, created for birthdays,
+        anniversaries, couples, family and every special moment.
+      </p>
+
+      <div class="coming-soon" aria-label="Coming Soon">
+        <span>Coming Soon</span>
+        <i class="sparkle one"></i>
+        <i class="sparkle two"></i>
+        <i class="sparkle three"></i>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">🎁</div>
+          <h3>Beautiful Combos</h3>
+          <p>Multiple personalized gifts thoughtfully combined in one package.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">💝</div>
+          <h3>Made for Moments</h3>
+          <p>Special combinations for birthdays, couples, family and celebrations.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">✨</div>
+          <h3>Coming Soon</h3>
+          <p>New curated combinations are being prepared for you.</p>
+        </article>
+      </div>
+
+      <a href="contact.html" class="cta">
+        Stay Tuned <span>→</span>
+      </a>
+
+
+      <a href="index.html" class="back-home">
+        ← Back to Home
+      </a>
+
+      <div class="brand">Amora Studios · Personalized With Love</div>
+
+    </div>
+  </main>
+
+  <script>
+    // Subtle mouse-based 3D movement for desktop.
+    const section = document.querySelector(".combo-section");
+    const text = document.querySelector(".coming-soon span");
+
+    section.addEventListener("mousemove", (event) => {
+      if (window.innerWidth <= 700) return;
+
+      const rect = section.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+      text.style.transform =
+        `rotateX(${8 - y * 10}deg) rotateY(${-5 + x * 12}deg)`;
+    });
+
+    section.addEventListener("mouseleave", () => {
+      text.style.transform = "rotateX(8deg) rotateY(-5deg)";
+    });
+  </script>
+
+</body>
+</html>

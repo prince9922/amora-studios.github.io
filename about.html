@@ -1,192 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Learn about Amora Studios, a personalised gifting brand creating thoughtful custom gifts from photos, names, messages and memories.">
-<title>About Us | Amora Studios</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn more about Amora Studios — personalized gifts made with love.">
+  <title>Amora Studios | About Us</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* About page only */
+    .about-hero {
+      padding: 72px 0 78px;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .about-hero h1 {
+      margin: 12px 0 20px;
+      color: var(--primary);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(44px, 5vw, 68px);
+      line-height: 1.05;
+    }
+
+    .about-hero-copy > p {
+      max-width: 570px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .about-hero-art {
+      position: relative;
+      min-height: 430px;
+      display: grid;
+      place-items: center;
+    }
+
+    .about-circle {
+      width: min(410px, 90%);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--accent-light);
+    }
+
+    .about-card {
+      position: absolute;
+      width: 250px;
+      padding: 28px;
+      border-radius: 12px;
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 20px 50px rgba(92,59,46,.18);
+    }
+
+    .about-card.main {
+      left: 6%;
+      bottom: 28px;
+    }
+
+    .about-card.small {
+      right: 2%;
+      top: 45px;
+      width: 175px;
+      padding: 21px;
+      background: #fff;
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .about-card .quote-mark {
+      font-family: "Playfair Display", serif;
+      font-size: 48px;
+      line-height: .7;
+      color: var(--accent-light);
+    }
+
+    .about-card h3 {
+      margin: 15px 0 8px;
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+    }
+
+    .about-card p {
+      margin: 0;
+      font-size: 11px;
+      line-height: 1.7;
+      color: rgba(255,255,255,.72);
+    }
+
+    .about-card.small .quote-mark {
+      color: var(--accent);
+      font-size: 35px;
+    }
+
+    .about-card.small h3 {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .about-card.small p {
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .about-story {
+      padding: 78px 0;
+      background: var(--cream);
+    }
+
+    .about-story-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 75px;
+      align-items: start;
+    }
+
+    .about-section-label h2 {
+      margin: 8px 0 0;
+      color: var(--primary);
+      font-family: "Playfair Display", serif;
+      font-size: 38px;
+      line-height: 1.12;
+    }
+
+    .about-story-content p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .about-story-content p:last-child { margin-bottom: 0; }
+
+    .values-section {
+      padding: 78px 0;
+      background: #fff;
+    }
+
+    .center-heading {
+      max-width: 650px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .center-heading h2 {
+      margin: 8px 0 12px;
+      color: var(--primary);
+      font-family: "Playfair Display", serif;
+      font-size: 38px;
+    }
+
+    .center-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .value-card {
+      padding: 28px 22px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--cream);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .value-icon {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 17px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--accent-light);
+      color: var(--primary);
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+    }
+
+    .value-card h3 {
+      margin: 0 0 9px;
+      color: var(--primary);
+      font-family: "Playfair Display", serif;
+      font-size: 19px;
+    }
+
+    .value-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .process-section {
+      padding: 78px 0;
+      background: #f4e8de;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .process-card {
+      position: relative;
+      padding: 30px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(92,59,46,.1);
+      border-radius: 12px;
+    }
+
+    .process-number {
+      color: var(--accent);
+      font-family: "Playfair Display", serif;
+      font-size: 38px;
+    }
+
+    .process-card h3 {
+      margin: 12px 0 8px;
+      color: var(--primary);
+      font-family: "Playfair Display", serif;
+      font-size: 21px;
+    }
+
+    .process-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .about-cta {
+      padding: 75px 0;
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+    }
+
+    .about-cta h2 {
+      margin: 9px 0 12px;
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+    }
+
+    .about-cta p {
+      max-width: 580px;
+      margin: 0 auto 25px;
+      color: rgba(255,255,255,.72);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .about-cta .eyebrow { color: var(--accent-light); }
+
+    .btn-light {
+      background: #fff;
+      color: var(--primary);
+    }
+
+    @media (max-width: 850px) {
+      .about-hero-grid,
+      .about-story-grid { grid-template-columns: 1fr; gap: 35px; }
+      .about-hero-art { min-height: 380px; }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .about-hero { padding: 50px 0; }
+      .about-hero h1 { font-size: 43px; }
+      .about-hero-art { min-height: 330px; }
+      .about-card.main { left: 0; bottom: 12px; }
+      .about-card.small { right: 0; top: 20px; }
+      .about-story,
+      .values-section,
+      .process-section { padding: 55px 0; }
+      .about-section-label h2,
+      .center-heading h2 { font-size: 31px; }
+      .values-grid,
+      .process-grid { grid-template-columns: 1fr; }
+      .about-cta h2 { font-size: 34px; }
+    }
+  </style>
 </head>
-<body>
 
-<header class="site-header">
-<div class="container nav">
-<a href="index.html" class="logo">Amora <span>Studios</span></a>
-<button class="menu-btn" aria-label="Open menu">☰</button>
-<nav class="nav-links">
-<a href="index.html">Home</a>
-<a href="coming-soon.html">Products</a>
-<a href="coming-soon.html">Category</a>
-<a href="about.html">About Us</a>
-<a href="https://wa.me/918004666834" class="nav-cta" target="_blank">Contact</a>
-</nav>
-</div>
-</header>
+<body data-page="about">
+  <div id="siteHeader"></div>
 
-<div class="ticker">
-<div class="ticker-track">
-<span class="ticker-item">✨ For placing your order, WhatsApp us at +91 80046 66834 &nbsp; • &nbsp; Customise your favourite gifts with Amora Studios</span>
-<span class="ticker-item">✨ For placing your order, WhatsApp us at +91 80046 66834 &nbsp; • &nbsp; Customise your favourite gifts with Amora Studios</span>
-<span class="ticker-item">✨ For placing your order, WhatsApp us at +91 80046 66834 &nbsp; • &nbsp; Customise your favourite gifts with Amora Studios</span>
-</div>
-</div>
+  <main>
+    <section class="about-hero">
+      <div class="container about-hero-grid">
+        <div class="about-hero-copy">
+          <span class="eyebrow">ABOUT AMORA STUDIOS</span>
+          <h1>Made personal.<br>Made with love.</h1>
+          <p>
+            Amora Studios is a personalized gifting brand built around one simple idea:
+            the best gifts are the ones that mean something. We turn photographs, names,
+            messages and memories into thoughtful products made especially for you.
+          </p>
+        </div>
 
-<main>
+        <div class="about-hero-art" aria-label="Amora Studios brand message">
+          <div class="about-circle"></div>
 
-<section class="hero">
-<div class="container hero-grid">
-<div>
-<div class="eyebrow">About Amora Studios</div>
-<h1>We turn <em>memories</em> into gifts.</h1>
-<p class="lead">
-Amora Studios is a personalised gifting brand built around one simple idea:
-a gift becomes more meaningful when it carries something personal — a favourite
-photo, a name, a message, a special date or a memory.
-</p>
-<p class="lead">
-From everyday keepsakes to thoughtful gifts for birthdays, anniversaries,
-festivals and special occasions, we create products designed to make moments
-last a little longer.
-</p>
-</div>
-<div class="hero-art"><span>
-<img src="assets/image/Amora-logo.png" alt="Amora Studios Logo"/>
-</span></div>
-</div>
-</section>
+          <div class="about-card main">
+            <div class="quote-mark">“</div>
+            <h3>Your memories deserve a place.</h3>
+            <p>From everyday surprises to milestone celebrations, we create keepsakes that make moments last a little longer.</p>
+          </div>
 
-<section class="section">
-<div class="container two-col">
-<div class="image-box"><span><img src="assets/image/products.png" alt="products"/></span></div>
-<div class="story-card">
-<div class="eyebrow">Our story</div>
-<h2>Personalisation is at the heart of what we do.</h2>
-<p>
-Amora Studios was created to make personalised gifting simple, accessible
-and genuinely special. Instead of choosing a generic gift from a shelf,
-customers can add their own story to it.
-</p>
-<p>
-A photograph from a favourite day, the name of someone special, a heartfelt
-message or a design created just for the occasion can become part of the
-final product.
-</p>
-<p>
-We focus on personalised products across categories such as mugs, magnets,
-T-shirts, frames, cushions, keychains and bottles, giving customers multiple
-ways to turn their ideas into tangible gifts.
-</p>
-</div>
-</div>
-</section>
+          <div class="about-card small">
+            <div class="quote-mark">♡</div>
+            <h3>Personalized with love.</h3>
+            <p>Thoughtful gifts. Meaningful moments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="section values">
-<div class="container">
-<div class="eyebrow">What matters to us</div>
-<h2>Our approach</h2>
-<div class="value-grid">
-<div class="value-card">
-<div class="value-icon">01</div>
-<h3>Personal</h3>
-<p>Every custom product starts with something meaningful to the customer — a photo, name, message, artwork or memory.</p>
-</div>
-<div class="value-card">
-<div class="value-icon">02</div>
-<h3>Thoughtful</h3>
-<p>We design our gifting experience around occasions and emotions, not just products.</p>
-</div>
-<div class="value-card">
-<div class="value-icon">03</div>
-<h3>Made to Gift</h3>
-<p>Our products are created with gifting in mind, from customisation to presentation and the final experience.</p>
-</div>
-</div>
-</div>
-</section>
+    <section class="about-story" id="about">
+      <div class="container about-story-grid">
+        <div class="about-section-label">
+          <span class="eyebrow">OUR STORY</span>
+          <h2>From a simple idea to something personal.</h2>
+        </div>
 
-<section class="section">
-<div class="container">
-<div class="eyebrow">What we create</div>
-<h2>Explore our personalised gifting range</h2>
-<div class="categories">
-<a class="cat" href="coming-soon.html">Coffee Mugs<span>Photos, names & custom designs</span></a>
-<a class="cat" href="coming-soon.html">Magnets<span>Small keepsakes from favourite memories</span></a>
-<a class="cat" href="coming-soon.html">T-Shirts<span>Custom prints made to wear</span></a>
-<a class="cat" href="coming-soon.html">Frames<span>Memories made for display</span></a>
-<a class="cat" href="coming-soon.html">Cushions<span>Soft personalised gifting</span></a>
-<a class="cat" href="coming-soon.html">Keychains<span>Compact everyday keepsakes</span></a>
-<a class="cat" href="coming-soon.html">Bottles<span>Personalised everyday essentials</span></a>
-<a class="cat" href="coming-soon.html">View all<span>Discover Amora Studios</span></a>
-</div>
-</div>
-</section>
+        <div class="about-story-content">
+          <p>
+            Every special occasion has a story behind it — a photograph, an inside joke,
+            a name, a date or a few words that mean the world to someone. Amora Studios
+            exists to turn those little details into gifts people can actually keep.
+          </p>
+          <p>
+            We create personalized products across mugs, bottles, cushions, keyrings,
+            frames, magnets and custom apparel. Our focus is not simply on printing a
+            design; it is on making the final product feel like it belongs to the person
+            receiving it.
+          </p>
+          <p>
+            Whether it is a birthday surprise, an anniversary, a friendship memory,
+            a festival gift or just a small “thinking of you” moment, we believe a
+            personalized gift can make an ordinary day memorable.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<section class="section">
-<div class="container two-col">
-<div>
-<div class="eyebrow">For every occasion</div>
-<h2>A personal touch for every celebration.</h2>
-<p class="lead">
-Whether it is a birthday, anniversary, wedding, festival, friendship,
-couple gift, family memory or simply a “thinking of you” moment, personalised
-gifting can make an ordinary present feel much more intentional.
-</p>
-</div>
-<div class="story-card">
-<h3>Looking for something custom?</h3>
-<p>
-Send us your idea, photo, name or design. We can discuss the product,
-customisation and order details with you directly.
-</p>
-<a href="https://wa.me/918004666834" class="btn" target="_blank">Chat on WhatsApp</a>
-</div>
-</div>
-</section>
+    <section class="values-section">
+      <div class="container">
+        <div class="center-heading">
+          <span class="eyebrow">WHAT WE BELIEVE</span>
+          <h2>The Amora touch</h2>
+          <p>Everything we create is guided by a few simple principles.</p>
+        </div>
 
-<section class="section">
-<div class="container">
-<div class="cta">
-<div class="eyebrow" style="color:#f8d9c9">Amora Studios</div>
-<h2>Your memory. Your idea. Your gift.</h2>
-<p>
-Have a design in mind? Contact us and let's turn it into a personalised
-gift made especially for you.
-</p>
-<a href="https://wa.me/918004666834" class="btn" target="_blank">Order / Enquire on WhatsApp</a>
-</div>
-</div>
-</section>
+        <div class="values-grid">
+          <article class="value-card">
+            <div class="value-icon">♡</div>
+            <h3>Personal</h3>
+            <p>Your photo, your words, your story. Every custom piece should feel uniquely yours.</p>
+          </article>
 
-</main>
+          <article class="value-card">
+            <div class="value-icon">✦</div>
+            <h3>Thoughtful</h3>
+            <p>We design around the emotion behind the gift, not just the product itself.</p>
+          </article>
 
-<footer>
-<div class="container">
-<div class="footer-grid">
-<div>
-<div class="footer-logo">Amora <span>Studios</span></div>
-<p>Personalised gifts made with your memories.</p>
-<p>WhatsApp: <a href="https://wa.me/918004666834" target="_blank">+91 80046 66834</a></p>
-</div>
-<div>
-<h4>Quick Links</h4>
-<a href="index.html">Home</a><br>
-<a href="coming-soon.html">Categories</a><br>
-<a href="about.html">About Us</a><br>
-<a href="terms.html">Terms & Conditions</a>
-</div>
-<div>
-<h4>Write to us</h4>
-<a href="mailto:support@amorastudios.in">support@amorastudios.in</a>
-<p>Instagram: @toamorastudios</p>
-</div>
-</div>
-<div class="footer-bottom">
-<span>© 2026 Amora Studios. All rights reserved.</span>
-<a href="terms.html">Terms & Conditions</a>
-</div>
-</div>
-</footer>
+          <article class="value-card">
+            <div class="value-icon">◇</div>
+            <h3>Quality</h3>
+            <p>We care about print quality, presentation and the details that make a product feel special.</p>
+          </article>
 
-<script src="assets/js/main.js"></script>
+          <article class="value-card">
+            <div class="value-icon">♥</div>
+            <h3>Made with Love</h3>
+            <p>From customization to packaging, every order deserves care and attention.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section">
+      <div class="container">
+        <div class="center-heading">
+          <span class="eyebrow">HOW IT WORKS</span>
+          <h2>Your memory. Our craft.</h2>
+          <p>A simple process designed to make personalized gifting easy.</p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="process-number">01</div>
+            <h3>Choose your gift</h3>
+            <p>Pick a product or browse a collection based on the occasion and the person you are gifting.</p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-number">02</div>
+            <h3>Make it personal</h3>
+            <p>Add your favourite photo, name, date, message or design idea to make the gift yours.</p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-number">03</div>
+            <h3>We create it</h3>
+            <p>We prepare your personalized product with care and get it ready to become part of someone's memory.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-cta">
+      <div class="container">
+        <span class="eyebrow">LET'S CREATE SOMETHING SPECIAL</span>
+        <h2>Have a memory worth gifting?</h2>
+        <p>
+          Explore our personalized collections and find something made for your
+          favourite person, favourite occasion or favourite memory.
+        </p>
+        <a class="btn btn-light" href="category.html?category=Mugs">Explore Our Products →</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

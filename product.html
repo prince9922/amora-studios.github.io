@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amora Studios product details.">
+  <title>Amora Studios | Product</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="product">
+  <div id="siteHeader"></div>
+
+  <main>
+    <section class="page-heading compact">
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><a id="productCategoryLink" href="category.html?category=Mugs">Mugs</a><span>/</span><span id="productCrumb">Product</span></div>
+      </div>
+    </section>
+
+    <section class="container product-layout">
+      <div class="product-main">
+        <div class="product-gallery">
+          <div class="product-thumbs" id="productThumbs"></div>
+          <div class="product-main-image">
+            <img id="productMainImage" src="" alt="">
+          </div>
+        </div>
+
+        <div class="product-information">
+          <span class="eyebrow" id="productCategory">MUGS</span>
+          <h1 id="productTitle">Product Title</h1>
+          <div class="product-price-large" id="productPrice">₹0</div>
+          <p class="product-details" id="productDetails"></p>
+
+          <div class="detail-box">
+            <h3>Product Details</h3>
+            <ul id="productFeatures"></ul>
+          </div>
+
+          <a class="btn btn-dark order-btn" id="whatsappOrder" href="#" target="_blank" rel="noopener">Order on WhatsApp →</a>
+        </div>
+      </div>
+
+      <aside class="similar-products">
+        <div class="aside-heading">
+          <span class="eyebrow">YOU MAY ALSO LIKE</span>
+          <h2>Similar Products</h2>
+        </div>
+        <div id="similarGrid"></div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

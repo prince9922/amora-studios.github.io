@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse Amora Studios products by category.">
+  <title>Amora Studios | Category</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="category">
+  <div id="siteHeader"></div>
+
+  <main>
+    <section class="page-heading">
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span id="crumbCategory">Mugs</span></div>
+        <span class="eyebrow">OUR COLLECTION</span>
+        <h1 id="categoryHeading">Mugs</h1>
+        <p id="categoryDescription">Personalized mugs for every special moment.</p>
+      </div>
+    </section>
+
+    <section class="category-toolbar container">
+      <div class="category-pills" id="categoryPills"></div>
+      <select id="sortProducts" aria-label="Sort products">
+        <option value="featured">Featured</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+      </select>
+    </section>
+
+    <section class="container category-products">
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
