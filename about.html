@@ -307,6 +307,7 @@
       .about-cta h2 { font-size: 34px; }
     }
   </style>
+<link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body data-page="about">
@@ -454,5 +455,6 @@
 
   <script src="assets/js/data.js"></script>
   <script src="assets/js/app.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{});}</script>
 </body>
 </html>

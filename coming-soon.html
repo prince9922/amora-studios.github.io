@@ -530,6 +530,7 @@
       }
     }
   </style>
+<link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
@@ -626,5 +627,6 @@
     });
   </script>
 
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{});}</script>
 </body>
 </html>

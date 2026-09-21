@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+<link rel="manifest" href="manifest.webmanifest">
 </head>
 <body data-page="product">
   <div id="siteHeader"></div>
@@ -24,8 +25,11 @@
       <div class="product-main">
         <div class="product-gallery">
           <div class="product-thumbs" id="productThumbs"></div>
-          <div class="product-main-image">
-            <img id="productMainImage" src="" alt="">
+          <div class="product-media-column">
+            <div class="product-main-image">
+              <img id="productMainImage" src="" alt="">
+            </div>
+            <div id="productMediaInfo"></div>
           </div>
         </div>
 
@@ -58,5 +62,6 @@
 
   <script src="assets/js/data.js"></script>
   <script src="assets/js/app.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{});}</script>
 </body>
 </html>
