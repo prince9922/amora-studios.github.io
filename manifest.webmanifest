@@ -1,1 +1,18 @@
-{"name":"Amora Studios","short_name":"Amora","start_url":"./index.html","display":"standalone","background_color":"#fffaf7","theme_color":"#5c3b2e","icons":[]}
+{
+  "name": "Amora Studios",
+  "short_name": "Amora",
+  "description": "Personalized gifts, custom photo gifts, mugs, frames and more from Amora Studios.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fffaf7",
+  "theme_color": "#5c3b2e",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Utility/private pages
+Disallow: /cart.html
+Disallow: /wishlist.html
+Disallow: /search.html
+Disallow: /product.html
+
+# Temporary/placeholder page
+Disallow: /coming-soon.html
+
+Sitemap: https://amorastudios.in/sitemap.xml
